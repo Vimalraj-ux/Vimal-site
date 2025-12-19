@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,  sans-serif;
+    line-height: 1.6;
+    color:  #333;
+
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+.Header{
+    background: #333;
+    color:  #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0%;
+    z-index: 1000;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    max-width: 1200px;
+    margin: auto;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+.nav-links li{
+    margin:0% 15px;
+
+}
+.nav-links a{
+    color:#fff;
+    font-weight: bold;
+    translate: color 0.3s;
+
+}
+.nav-links a:hover{
+    color: #ff6347;
+
+}
+.menu-toggle{
+    display:none;
+    background: none;
+    color:#fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+.marvel{
+    height: 100vh;
+    background:linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+    padding: 0% 20px;
+}
+.marvel h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.marvel p{
+    margin-bottom: 20px;
+}
+.btn{
+    background: #333;
+    color:#fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background 0.3s;
+}
+.btn:hover{
+    background: #ff6347;
+}
+.features{
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+.features h2{
+    margin-bottom: 20px;
+}
+.features-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.features-items{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact{
+    padding: 40px 20px;
+    background-color: #fff;
+}
+.contact h2{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+#contactform{
+    max-width: 600px;
+    margin: auto;
+}
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+    
+}
+.form-group input,
+.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+   
+}
+button.btn{
+    width: 100%; 
+}
+.footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer p{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.social-icons{
+    display: flex;
+    gap: 15px;
+
+}
+.social-icon{
+    color:#fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+.social-icon:hover{
+    color:#ff6347;
+}
+@media(max-width: 768px){
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+    }
+    .nav-links.active{
+        display: flex;
+    }
+    .menu-toggle{
+        display: block;
+    }
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Resposive web</title>
+</head>
+
+<body>
+   <!--Header section start--> 
+   <Header class="Header">
+     <nav class="navbar">
+        <a href="" class="logo">logo</a>
+        <ul class="nav-links">
+            <li><a href="#home">home</a></li>
+            <li><a href="#features">features</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+        <button class="menu-toggle">click</button>
+     </nav>
+
+   </Header>
+      <!--Header section end-->
+     <!-- marvel section start-->
+    <section id="home" class="marvel">
+       <div class="marvel-content">
+        <h1>Welcome to my web</h1>
+        <p>Responsive web for modern web development</p>
+        <a href="" class="btn">learn more</a>
+       </div>
+    </section>
+      <!-- marvel section end-->
+       <!--features section start-->
+    <section id="features" class="features">
+    <h2>Features</h2>
+    <div class="features-grid">
+        <div class=features-items>
+            <h3>Responsive wed</h3>
+            <p>your web looks great on any device</p>
+        </div>
+        <div class=features-items>
+            <h3>Morden AI</h3>
+            <p>lean,simple,and visually appealing layout</p>
+        </div>
+        <div>
+            <h3>Costomizable</h3>
+            <p>Adjust every aspect to match your brand</p>
+        </div>
+    </div>
+    </section>
+        <!--features section end-->
+        <!--contact  section start-->
+        <section>
+            <h2>contact us</h2>
+            <form id="contactform">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="" id="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" name="" id="Email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" placeholder="Your Message" row="5"requried></textarea>
+                </div>
+                <button type="submit" class="btn">send Message</button>
+            </form>
+        </section>
+          <!--contact  section end-->
+
+
+          <!--footer section start-->
+          <footer class="footer">
+            <div class="footer-container">
+                <p>&COPY;2025 nightfury.All Rights reserved.</p>
+                <div class="social icons">
+                    <a href="" class="socila-icon"><i><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="" class="socila-icon><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="socila-icon><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="" class="socila-icon><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+          </footer>
+          <!--footer section end-->
+          <script>
+            document.querySelector('.menu-toggle').addEventListener('click',()=>{
+document.querySelector('.nav-links').classList.toggle('active');
+})
+document.getElementById('contactform'),addEventListener('submit',(e)=>{
+    e.preventDefault();
+    alert("thank you")
+
+})
+          </script>
+</body>
+</html>
